@@ -1,0 +1,12 @@
+@mixin headline-1 () {
+  font-weight: $font-weight-regular;
+  font-family: $font-sans;
+  font-size: 1.6rem;
+  // font-style: italic;
+  line-height: 1.2;
+  // color: getColor(gray, 10);
+}
+
+.question {
+  @include headline-1();
+}

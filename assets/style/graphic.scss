@@ -1,0 +1,31 @@
+path, line {
+  &.axis {
+    stroke: getColor(gray, 10);
+    stroke-width: 1px;
+  }
+
+  &.tick {
+    stroke: getColor(gray, 70);
+    stroke-width: 1px;
+  }
+}
+
+text {
+  &.tick {
+    fill: getColor(grey, 30);
+    font-size: 0.7rem;
+  }
+
+  &.axis {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+circle {
+  transition: cx $transition, cy $transition, fill $transition;
+}
+
+line {
+  transition: d $transition;
+}
