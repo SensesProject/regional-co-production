@@ -16,6 +16,9 @@ export default {
   css: [
     '@/assets/style/base.scss'
   ],
+  router: {
+    base: '/db-intro/'
+  },
   resolve: {
     alias: {
       style: 'assets/style'
