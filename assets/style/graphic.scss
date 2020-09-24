@@ -1,31 +1,49 @@
-path, line {
-  &.axis {
-    stroke: getColor(gray, 10);
-    stroke-width: 1px;
+.box {
+  &.box--blue {
+    fill: #d2e8f5;
+    stroke: #a3d1ea;
   }
 
-  &.tick {
-    stroke: getColor(gray, 70);
-    stroke-width: 1px;
-  }
-}
-
-text {
-  &.tick {
-    fill: getColor(grey, 30);
-    font-size: 0.7rem;
+  &.box--green {
+    fill: #d2f4df;
+    stroke: #a2e7c0;
   }
 
-  &.axis {
-    font-weight: bold;
-    font-size: 1rem;
+  &.box--white {
+    fill: #ffffff;
+    stroke: #e4e4e4;
   }
 }
 
-circle {
-  transition: cx $transition, cy $transition, fill $transition;
-}
+.text {
+  font-size: 24px;
 
-line {
-  transition: d $transition;
+  &.text--blue {
+    fill: #1b799b;
+  }
+
+  &.text--green {
+    fill: #1b9562;
+  }
+
+  &.text--white {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 19px;
+    fill: #333333;
+  }
+
+  &.text--small {
+    font-size: 19px;
+  }
+
+  &.text--big {
+    font-size: 30px;
+  }
+
+  &.text--alt {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+  }
 }

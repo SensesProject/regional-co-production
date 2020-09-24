@@ -1,0 +1,76 @@
+<template>
+  <g>
+    <rect :x="x - width / 2" :y="y - height / 2" :width="width" :height="height" :class="`box box--${color}`" rx="2" ry="2" />
+    <text :y="y + 10 - (text.length - 1) * (lineHeight / 2)" text-anchor="middle" :class="`text text--${color} text--${font}`">
+      <tspan v-for="(t, i) in text" :x="x" :dy="i * lineHeight">{{ t }}</tspan>
+    </text>
+  </g>
+</template>
+
+<script>
+export default {
+  props: {
+    x: {
+      type: Number,
+      default: 0
+    },
+    y: {
+      type: Number,
+      default: 0
+    },
+    font: {
+      type: String,
+      default: 'default'
+    },
+    w: {
+      type: String,
+      default: 'wide'
+    },
+    h: {
+      type: String,
+      default: 'tall'
+    },
+    color: {
+      type: String,
+      default: 'white'
+    },
+    text: {
+      type: Array,
+      default: () => []
+    }
+  },
+  computed: {
+    width () {
+      switch (this.w) {
+        case 'side':
+          return 350
+        case 'default':
+          return 320
+        default:
+          return 300
+      }
+    },
+    height () {
+      switch (this.h) {
+        case 'tall':
+          return 100
+        default:
+          return 60
+      }
+    },
+    lineHeight () {
+      switch (this.font) {
+        case 'big':
+          return 30
+        default:
+          return 20
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+  @import "~@/assets/style/global";
+
+</style>

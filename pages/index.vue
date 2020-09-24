@@ -8,20 +8,20 @@
       <Chart />
       <section class="steps">
         <IntersectionObserver :step="1" :noStyling="true">
-          <section id="step--1" class="step" :class="{ isActive: step === 1 }">
+          <section class="step" :class="{ isActive: text === 'start' }">
             <h2>Where to start?</h2>
             <p>How effective adaptation will be, depends on the local socio-economic context. Therefore, adaptation strategies need to be designed with all those affected by and involved in the planning. This implies that global socioeconomic scenarios and climate projections, to be informative, need to be interpreted and tailored to address impacts relevant for the specific adaptation projects.</p>
             <p>When a formal impact model at the local scale does not exist to do this (so-called "regional integrated assessment models"), selected climate change impacts from global simulations can be used to inform the co-production process. This can happen during a broader brainstorming session or at a focused backcasting session to strengthen robustness.</p>
           </section>
         </IntersectionObserver>
         <IntersectionObserver :step="2" :noStyling="true">
-          <section id="step--2" class="step" :class="{ isActive: step === 2 }">
+          <section class="step" :class="{ isActive: text === 'defined' }">
             <h2>How well defined is the system?</h2>
             <p>Local adaptation planning has different level of knowledge advancement, depending on resources, institutional implementation at multiple levels, coordination between actors in the public and private sectors etc. and these considerations need to weigh foremost to design an effective co-production process. Depending on the knowledge already generated, a question that can be asked is whether we need to first explore alternatives in the future (what could happen) or develop goal-oriented pathways (what should happen).</p>
           </section>
         </IntersectionObserver>
         <IntersectionObserver :step="3" :noStyling="true">
-          <section id="step--3" class="step" :class="{ isActive: step === 3 }">
+          <section class="step" :class="{ isActive: text === 'well-defined' }">
             <h2>Building adaptation in a well-defined system  Build with scenarios and decision co-production techniques</h2>
             <p>When local adaptation planning is advanced, all knowledge from stakeholders and existing adaptation plans needs to be well integrated in the design of adaptation scenarios. In this case, scenario development and decision techniques can be used.</p>
             <p>First, an analysis of the system needs to be undertaken, based on literature and integrated with Delphi methods. Semi-quantitative techniques can be utilised to analyse and communicate the system dynamics [link to participatory system dynamics], such as Fuzzy Cognitive Maps [link to FCMs].</p>
@@ -31,7 +31,7 @@
           </section>
         </IntersectionObserver>
         <IntersectionObserver :step="4" :noStyling="true">
-          <section id="step--4" class="step" :class="{ isActive: step === 4 }">
+          <section class="step" :class="{ isActive: text === 'ill-defined' }">
             <h2>Building adaptation in an ill-defined system  Build with framing and scenario co-production techniques</h2>
             <p>When system dynamics driving local adaptation planning is ill-defined, the scope and context of the problem needs to be jointly framed with stakeholders and researchers using co-production scenarios techniques and methodologies, usually iteratively (such as the Story and Simulation approach [link to "Story and Simulation"].</p>
             <p>Creative brainstorming [link to brainstorming] to identify scenario-independent drivers of change is often structured with scenario matrix-based methods and techniques such as (semi-) quantitative morphological analysis [link to morphological analysis] and intuitive logic [link to intuitive logic]. This combined process together links global climate and socioeconomic scenarios to bottom-up system drivers in so-called nested scenarios.</p>
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+  import { mapState, mapActions } from 'vuex'
   import Question from '~/components/Question'
   import Answer from '~/components/Answer'
   import Introduction from '~/components/Introduction'
@@ -59,26 +60,20 @@
       Chart,
       IntersectionObserver
     },
-    data () {
-      return {
-        step: 0
-      }
+    computed: {
+      ...mapState('step', [
+        'step',
+        'text'
+      ])
+    },
+    methods: {
+      ...mapActions('step', [
+        'setStep'
+      ])
     },
     mounted () {
-      console.log('Step', this.step)
       this.$on('step', (step) => {
-        console.log({ step })
-        this.step = step
-        // this.changeSettings({ key: 'step', value: step })
-        switch (step) {
-          case 0:
-            // this.changeSettings({ key: 'isRotated', value: false })
-            // this.changeSettings({ key: 'barStacked', value: false })
-            // this.changeSettings({ key: 'showModels', value: false })
-            // this.changeSettings({ key: 'isColored', value: false })
-            // this.changeSettings({ key: 'highlight', value: [] })
-            break
-        }
+        this.setStep(step)
       })
     }
   }
