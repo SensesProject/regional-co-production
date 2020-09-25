@@ -1,10 +1,17 @@
 <template>
-  <g>
-    <rect :x="x - width / 2" :y="y - height / 2" :width="width" :height="height" :class="`box box--${color}`" rx="2" ry="2" />
+  <component
+    :is="link ? 'a' : 'g'"
+    :href="link ? link : false"
+    class="box"
+    :class="{ 'box--link': link }"
+    target="_blank">
+    <title v-if="link">Open techniques in the Finder</title>
+    <rect :x="x - width / 2" :y="y - height / 2" :width="width" :height="height" :class="`rect rect--${color}`" rx="2" ry="2" />
     <text :y="y + 10 - (text.length - 1) * (lineHeight / 2)" text-anchor="middle" :class="`text text--${color} text--${font}`">
       <tspan v-for="(t, i) in text" :x="x" :dy="i * lineHeight">{{ t }}</tspan>
     </text>
-  </g>
+    <text v-if="link" class="text text--icon" :x="x + width / 2 - 8" :y="y - height / 2 + 20" text-anchor="end">↗</text>
+  </component>
 </template>
 
 <script>
@@ -37,6 +44,10 @@ export default {
     text: {
       type: Array,
       default: () => []
+    },
+    link: {
+      type: [String, Boolean],
+      default: false
     }
   },
   computed: {

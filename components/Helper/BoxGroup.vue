@@ -1,7 +1,7 @@
 <template>
   <g>
     <Box :x="x" :y="y + 59" w="narrow" h="default" :color="color" :text="text" />
-    <Box :x="x" :y="y" w="default" h="default" color="white" :text="head" font="small" />
+    <Box :x="x" :y="y" w="default" h="default" color="white" :text="head" font="small" :link="link" />
   </g>
 </template>
 
@@ -32,6 +32,10 @@ export default {
     text: {
       type: Array,
       default: () => []
+    },
+    link: {
+      type: [String, Boolean],
+      default: false
     }
   }
 }

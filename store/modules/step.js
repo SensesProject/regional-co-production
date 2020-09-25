@@ -9,22 +9,22 @@ const steps = [
   {
     text: 'start',
     points: ['brainstorming', 'backcasting'],
-    highlights: ['left']
+    highlights: ['title', 'impact']
   },
   {
     text: 'defined',
     points: ['what-should', 'what-could'],
-    highlights: ['right']
+    highlights: ['questions']
   },
   {
     text: 'well-defined',
-    points: ['what-should', 'what-could'],
-    highlights: []
+    points: ['backcasting', 'visioning', 'participatory-system-dynamics'],
+    highlights: ['right']
   },
   {
     text: 'ill-defined',
-    points: ['what-should', 'what-could'],
-    highlights: []
+    points: [],
+    highlights: ['left']
   }
 ]
 
