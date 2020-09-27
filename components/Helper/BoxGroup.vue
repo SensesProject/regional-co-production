@@ -1,6 +1,6 @@
 <template>
   <g>
-    <Box :x="x" :y="y + 59" w="narrow" h="default" :color="color" :text="text" />
+    <Box :x="x" :y="y + 59" h="default" :color="color" :text="text" />
     <Box :x="x" :y="y" w="default" h="default" color="white" :text="head" font="small" :link="link" />
   </g>
 </template>

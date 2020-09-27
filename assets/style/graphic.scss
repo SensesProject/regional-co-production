@@ -67,9 +67,19 @@
         fill: getColor(neon, 45);
       }
 
-      .rect--white {
+      .rect--white, .rect--green, .rect--blue {
         fill: #fff;
         stroke: $color-neon;
+      }
+    }
+  }
+}
+
+.label {
+  &.label--link {
+    &:hover {
+      .text {
+        fill: getColor(neon, 45);
       }
     }
   }

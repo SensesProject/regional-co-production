@@ -5,7 +5,7 @@
     class="box"
     :class="{ 'box--link': link }"
     target="_blank">
-    <title v-if="link">Open techniques in the Finder</title>
+    <title v-if="false">Open techniques in the Finder</title>
     <rect :x="x - width / 2" :y="y - height / 2" :width="width" :height="height" :class="`rect rect--${color}`" rx="2" ry="2" />
     <text :y="y + 10 - (text.length - 1) * (lineHeight / 2)" text-anchor="middle" :class="`text text--${color} text--${font}`">
       <tspan v-for="(t, i) in text" :x="x" :dy="i * lineHeight">{{ t }}</tspan>
@@ -57,16 +57,18 @@ export default {
           return 350
         case 'default':
           return 320
+        case 'narrow':
+          return 180
         default:
           return 300
       }
     },
     height () {
       switch (this.h) {
-        case 'tall':
-          return 100
-        default:
+        case 'default':
           return 60
+        default:
+          return 100
       }
     },
     lineHeight () {

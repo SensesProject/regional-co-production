@@ -9,7 +9,7 @@ const steps = [
   {
     text: 'start',
     points: ['brainstorming', 'backcasting'],
-    highlights: ['title', 'impact']
+    highlights: ['title', 'impact', 'backcasting', 'brainstorming']
   },
   {
     text: 'defined',
@@ -23,7 +23,7 @@ const steps = [
   },
   {
     text: 'ill-defined',
-    points: [],
+    points: ['morphological', 'brainstorming', 'swot'],
     highlights: ['left']
   }
 ]
