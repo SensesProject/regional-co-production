@@ -9,12 +9,12 @@ const steps = [
   {
     text: 'start',
     points: ['brainstorming', 'backcasting'],
-    highlights: ['title', 'impact', 'backcasting', 'brainstorming']
+    highlights: []
   },
   {
     text: 'defined',
     points: ['what-should', 'what-could'],
-    highlights: ['questions']
+    highlights: ['questions', 'title']
   },
   {
     text: 'well-defined',

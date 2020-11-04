@@ -12,43 +12,38 @@
         <path class="path" d="M630,348 L630,497" marker-end="url(#arrow-0)" />
         <path class="path" d="M522,639 L522,733 L401,733" marker-end="url(#arrow-90)" />
         <path class="path" d="M738,639 L738,733 L859,733" marker-end="url(#arrow-270)" />
-        <Box :x="630" :y="63" w="wide" h="tall" color="blue" :text="['Socioeconomics /', 'climate scenarios']" font="big" link="https://climatescenarios.org/primer/socioeconomic-development" />
+        <Box :x="630" :y="63" w="wide" h="tall" color="blue" :text="['Socioeconomics /', 'climate scenarios']" font="big" link="https://climatescenarios.org/primer/how-are-socioeconomic-development-and-climate-change-connected" />
         <Box :x="630" :y="570" w="wide" h="tall" color="blue" :text="['Climate impact', 'scenarios']" font="big" link="https://climatescenarios.org/primer/climate-impacts" />
       </g>
 
       <g :class="isHighlight('left')">
-        <Label :x="360" :y="274" class="text text--alt" text-anchor="middle" text="No" link="https://climatescenarios.org/primer/adaptation" />
+        <Label :x="360" :y="274" class="text text--alt" text-anchor="middle" text="No" link="https://climatescenarios.org/finder/?framing=Yes&scenario-development=Yes" />
         <path class="path" d="M480,290 L200,290 L200,950 L460,950" marker-end="url(#arrow-270)" />
 
-        <BoxGroup :x="200" :y="582" color="blue" :head="['Morphological analysis/', 'intuitive logic']" :text="['Narratives and cartoons']" link="https://climatescenarios.org/finder/techniques/?name=MORPHOLOGICAL%20ANALYSIS" />
-        <BoxGroup :x="200" :y="731" color="blue" :head="['SWOT analysis']" :text="['Risk Assessment']" link="https://climatescenarios.org/finder/techniques/?name=SWOT%20ANALYSIS" />
-      </g>
-
-      <g :class="isHighlight(['left', 'brainstorming'])">
+        <BoxGroup :x="200" :y="582" color="blue" :head="['Intuitive logic​']" :text="['Narratives and cartoons']" link="https://climatescenarios.org/finder/?name=INTUITIVE%20LOGICS" />
+        <BoxGroup :x="200" :y="731" color="blue" :head="['Brainstorming​']" :text="['Risk Assessment']" link="https://climatescenarios.org/finder/?name=BRAINSTORMING" />
         <BoxGroup :x="200" :y="434" color="green" :head="['Brainstorming']" :text="['Nested scenarios']" link="https://climatescenarios.org/finder/techniques/?name=BRAINSTORMING" />
       </g>
 
       <g :class="isHighlight('right')">
-        <Label :x="890" :y="274" class="text text--alt" text-anchor="middle" text="Yes" link="https://climatescenarios.org/primer/adaptation" />
+        <Label :x="890" :y="274" class="text text--alt" text-anchor="middle" text="Yes" link="https://climatescenarios.org/finder/?scenario-development=Yes&framing=Yes" />
         <path class="path" d="M780,290 L1060,290 L1060,950 L800,950" marker-end="url(#arrow-90)" />
 
-        <BoxGroup :x="1060" :y="434" color="green" :head="['Visioning']" :text="['Vision']" link="https://climatescenarios.org/finder/techniques/?name=VISIONING" />
-        <BoxGroup :x="1060" :y="731" color="green" :head="['Participatory systems', 'dynamics']" :text="['Transformative pathways ']" link="https://climatescenarios.org/finder/techniques/?name=PARTICIPATORY%20SYSTEMS" />
-      </g>
-
-      <g :class="isHighlight(['right', 'backcasting'])">
-        <BoxGroup :x="1060" :y="582" color="green" :head="['Backcasting']" :text="['Pathways']" link="https://climatescenarios.org/finder/techniques/?name=BACKCASTING" />
+        <BoxGroup :x="1060" :y="434" color="green" :head="['Participatory', 'systems dynamics']" :text="['System analysis​']" link="https://climatescenarios.org/finder/?name=PARTICIPATORY%20SYSTEMS%20DYNAMICS" />
+        <BoxGroup :x="1060" :y="731" color="green" :head="['Backcasting']" :text="['Robust Pathways​']" link="https://climatescenarios.org/finder/?name=BACKCASTING" />
+        <BoxGroup :x="1060" :y="582" color="green" :head="['Visioning']" :text="['Multiscale Vision​']" link="https://climatescenarios.org/finder/?name=VISIONING" />
       </g>
 
       <g :class="isHighlight('questions')">
-        <Box :x="539.5" :y="217" h="default" w="narrow" color="white" :text="['exploratory']" link="https://climatescenarios.org/primer/adaptation" />
-        <Box :x="720.5" :y="217" h="default" w="narrow" color="white" :text="['normative']" link="https://climatescenarios.org/primer/adaptation" />
+        <Box :x="539.5" :y="217" h="default" w="narrow" color="white" :text="['exploratory']" link="https://climatescenarios.org/finder/?explorative=Yes" />
+        <Box :x="720.5" :y="217" h="default" w="narrow" color="white" :text="['normative']" link="https://climatescenarios.org/finder/?normative=Yes" />
       </g>
 
       <g :class="{ isHighlight: highlights.length === 0 }">
         <Box :x="630" :y="949" w="whide" h="tall" color="green" :text="['Adaptation', 'scenarios']" font="big" link="https://climatescenarios.org/primer/adaptation" />
-        <Box :x="630" :y="873" w="default" h="default" color="white" :text="['Robust Decision Making', '(trade-offs and robustness)']" link="https://climatescenarios.org/finder/techniques/?name=ROBUST%20DECISIONMAKING" />
+      </g>
 
+      <g :class="isHighlight(['right', 'left'])">
         <text :y="290" class="text text--alt" text-anchor="middle">
           <tspan x="630">Does other knowledge</tspan>
           <tspan x="630" dy="30">already exist?</tspan>
@@ -63,9 +58,9 @@
         <Dot :x="370" :y="694" v-if="points.includes('swot')" key="swot" label="SWOT is an assessment tool that lists the Strengths, Weaknesses, Opportunities, and Threats of a project, partnership, or product. It helps to distinguish between factors that can and can’t be influenced. SWOT is often presented in a 2×2 matrix, an overview of significant internal and external factors influencing strategies or possible futures. SWOT analysis is widely used, especially as a preliminary step in planning. The method may also be used in workshops involving a wide range of participants, and in combination with other future-oriented techniques." />
         <Dot :x="441" :y="177" v-if="points.includes('what-should')" key="what-should" label="<h4>What should happen?</h4><ul><li>In many cases, e.g. in quantitative scenario applications on the national to global scale, scenarios that address what should happen are referred to as ‘goal-oriented scenarios’ or pathways.</li><li>In other, more often regional, scenario applications, the common term is ‘normative scenario’. At regional level there is a clear and strong dichotomy between exploring what can happen and designing what should happen, mostly reinforced by a difference in scale with normative scenarios being developed for smaller regions and shorter time horizons, also building on different methods and tools. The explorative scenarios are built for opening the imagination amongst stakeholders on what can happen, while the normative scenarios are generally built after the explorative ones in order to cope with challenges. For both quantitative (model-based) and qualitative scenario approaches, both normative and explorative scenarios can be developed with the same (modelling) tools or using translating techniques to link qualitative and quantitative scenarios.</li></ul>" />
         <Dot :x="820" :y="177" v-if="points.includes('what-could')" key="what-could" label="<h4>What could happen?</h4><ul><li>For quantitative model-based scenario approaches, often deployed on the national to global scale, the term ‘projection’ is frequently used to refer to scenarios that address what can happen, for example in ‘climate impact projections’ or ‘baseline projections’. We suggest using this term in instances, where the quantitative part dominates the scenario content, even if underpinned by a secondary narrative element.</li><li>For regional scenario approaches, the term ‘explorative scenario’ is commonly used. Here the term ‘projection’ is restricted to model-based, quantitative elements of explorative scenarios which are based on the qualitative narrative elements at their core.</li></ul>" />
-        <Dot :x="1229" :y="545" v-if="points.includes('backcasting')" key="backcasting" label="Backcasting is normative approach which works backwards from a particular desired endpoint (goal/vision) to the present in order to determine the feasibility of that future and what policy measures and actions would be required to reach that point. Backcasting is not concerned with predicting the future; rather, it is a strategic problem-solving approach, in the quest for the answer to how to reach specified outcomes in the future." />
-        <Dot :x="1229" :y="700" v-if="points.includes('participatory-system-dynamics')" key="participatory-system-dynamics" label="System dynamics (SD) is an approach to understanding the nonlinear behaviour of complex systems over time using stocks, flows, internal feedback loops, table functions and time delays. A System Dynamics application begins with the definition of a problem. It then draws in all major patterns of influence that together create the “system”. Different values for variables and different policy structures may then be introduced to simulate how the system would respond to different circumstances or initiatives." />
-        <Dot :x="1229" :y="398" v-if="points.includes('visioning')" key="visioning" label="Visioning is the process of creating a series of images or visions of the future that are real and compelling enough to motivate and guide people toward focusing their efforts on achieving certain goals. The visioning process is almost always done in a participatory manner. The group of participants needs to include representation from key constituencies both inside and outside the organization or community. The meeting facilitator will need to set up the vision discussion by creating a good mental space for the sharing of values and aspirations." />
+        <Dot :x="1229" :y="700" v-if="points.includes('backcasting')" key="backcasting" label="Backcasting is normative approach which works backwards from a particular desired endpoint (goal/vision) to the present in order to determine the feasibility of that future and what policy measures and actions would be required to reach that point. Backcasting is not concerned with predicting the future; rather, it is a strategic problem-solving approach, in the quest for the answer to how to reach specified outcomes in the future." />
+        <Dot :x="1229" :y="398" v-if="points.includes('participatory-system-dynamics')" key="participatory-system-dynamics" label="System dynamics (SD) is an approach to understanding the nonlinear behaviour of complex systems over time using stocks, flows, internal feedback loops, table functions and time delays. A System Dynamics application begins with the definition of a problem. It then draws in all major patterns of influence that together create the “system”. Different values for variables and different policy structures may then be introduced to simulate how the system would respond to different circumstances or initiatives." />
+        <Dot :x="1229" :y="545" v-if="points.includes('visioning')" key="visioning" label="Visioning is the process of creating a series of images or visions of the future that are real and compelling enough to motivate and guide people toward focusing their efforts on achieving certain goals. The visioning process is almost always done in a participatory manner. The group of participants needs to include representation from key constituencies both inside and outside the organization or community. The meeting facilitator will need to set up the vision discussion by creating a good mental space for the sharing of values and aspirations." />
       </g>
     </svg>
   </figure>
