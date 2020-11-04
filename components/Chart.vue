@@ -145,13 +145,6 @@ export default {
       opacity: 1;
     }
 
-    img {
-      max-width: 100%;
-      width: auto;
-      height: auto;
-      max-height: 90vh;
-    }
-
     svg {
       position: absolute;
       left: 0;

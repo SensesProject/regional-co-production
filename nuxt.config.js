@@ -2,11 +2,11 @@
 export default {
   mode: 'spa',
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Learn Module of co-production techniques',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'In this module, we illustrate how to use co-production techniques to start or develop adaptation planning given different stages of the policy cycle.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -17,7 +17,7 @@ export default {
     '@/assets/style/base.scss'
   ],
   router: {
-    base: '/db-intro/'
+    base: '/co-production/'
   },
   resolve: {
     alias: {
