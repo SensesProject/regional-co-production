@@ -8,7 +8,7 @@ const steps = [
   },
   {
     text: 'start',
-    points: ['brainstorming', 'backcasting'],
+    points: [],
     highlights: []
   },
   {

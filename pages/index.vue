@@ -34,7 +34,7 @@
           </section>
         </IntersectionObserver>
         <IntersectionObserver :step="3" :noStyling="true">
-          <section class="step" :class="{ isActive: text === 'well-defined' }">
+          <section class="step" :class="{ isActive: text === 'well-defined' }" id="dutch">
             <header>
               <span class="caption">Netherlands Case</span>
               <h2>Building adaptation in an information-rich context with existing adaptation plans</h2>
@@ -51,7 +51,7 @@
           </section>
         </IntersectionObserver>
         <IntersectionObserver :step="4" :noStyling="true">
-          <section class="step" :class="{ isActive: text === 'ill-defined' }">
+          <section class="step" :class="{ isActive: text === 'ill-defined' }" id="kenya">
             <header>
               <span class="caption">Kenya Case</span>
               <h2>Building adaptation in an information-scarce formulation/adoption context</h2>
