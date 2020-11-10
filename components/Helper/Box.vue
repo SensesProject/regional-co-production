@@ -10,7 +10,7 @@
     <text :y="y + 10 - (text.length - 1) * (lineHeight / 2)" text-anchor="middle" :class="`text text--${color} text--${font}`">
       <tspan v-for="(t, i) in text" :x="x" :dy="i * lineHeight">{{ t }}</tspan>
     </text>
-    <text v-if="link" class="text text--icon" :x="x + width / 2 - 8" :y="y - height / 2 + 20" text-anchor="end">↗</text>
+    <text v-if="link" :class="`text text--icon text--icon-${color}`" :x="x + width / 2 - 8" :y="y - height / 2 + 20" text-anchor="end">↗</text>
   </component>
 </template>
 

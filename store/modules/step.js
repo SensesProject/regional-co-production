@@ -18,12 +18,12 @@ const steps = [
   },
   {
     text: 'well-defined',
-    points: ['backcasting', 'visioning', 'participatory-system-dynamics'],
+    points: ['system-dynamics', 'visioning', 'wildcards', 'backcasting'],
     highlights: ['right']
   },
   {
     text: 'ill-defined',
-    points: ['morphological', 'brainstorming', 'swot'],
+    points: ['morphological', 'brainstorming', 'intuitive-logics'],
     highlights: ['left']
   }
 ]

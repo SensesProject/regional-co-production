@@ -1,7 +1,9 @@
 <template>
   <g>
-    <Box :x="x" :y="y + 59" h="default" :color="color" :text="text" />
-    <Box :x="x" :y="y" w="default" h="default" color="white" :text="head" font="small" :link="link" />
+    <g v-for="(el, i) in text">
+      <Box :x="x" :y="y + (64 * (i + 1))" h="default" color="white" :text="el" font="small" :link="link[i]" />
+    </g>
+    <Box :x="x" :y="y" w="default" h="default" :color="color" :text="head" />
   </g>
 </template>
 
@@ -34,8 +36,8 @@ export default {
       default: () => []
     },
     link: {
-      type: [String, Boolean],
-      default: false
+      type: Array,
+      default: () => []
     }
   }
 }

@@ -19,7 +19,16 @@
 
   &.text--icon {
     font-size: 17px;
-    fill: $color-neon;
+    fill: getColor(gray, 70);
+
+    &.text--icon-blue {
+      fill: getColor(blue, 60);
+    }
+
+    &.text--icon-green {
+      fill: getColor(green, 60);
+    }
+    // fill: $color-neon;
   }
 
   &.text--small {
@@ -34,6 +43,10 @@
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
+
+    &.text--alt--small {
+      font-size: 18px;
+    }
   }
 }
 

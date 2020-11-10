@@ -5,8 +5,8 @@
     class="label"
     :class="{ 'label--link': link }"
     target="_blank">
-    <text :x="x" :y="y" text-anchor="middle" :class="`text text--alt`">
-      {{ text }}
+    <text :y="y + 10 - (text.length - 1) * 22" :text-anchor="anchor" :class="`text text--alt text--alt--small`">
+      <tspan v-for="(t, i) in text" :x="x" :dy="i === 0 ? 0 : 22">{{ t }}</tspan>
     </text>
     <text v-if="link" class="text text--icon" :x="x + 40" :y="y - 10" text-anchor="end">↗</text>
   </component>
@@ -28,7 +28,12 @@ export default {
       default: false
     },
     text: {
-      type: String
+      type: Array,
+      default: () => []
+    },
+    anchor: {
+      type: String,
+      default: 'start'
     }
   }
 }
