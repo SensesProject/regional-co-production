@@ -135,11 +135,15 @@ export default {
   .graphic {
   	width: 100%;
   	height: auto;
-  	position: sticky;
     display: block;
     text-align: center;
+    position: relative;
     opacity: 0;
     transition: opacity 1s;
+
+    @include query($wide) {
+      position: sticky;
+    }
 
     &.isLoaded {
       opacity: 1;

@@ -140,16 +140,45 @@
 
     .introduction, .conclusion {
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 6;
       margin: 5vh 0;
+
+      @include query($narrow) {
+        grid-column-end: 6;
+      }
+
+      @include query($medium) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+
+      @include query($wide) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
     }
 
     .steps {
       display: grid;
       grid-row-gap: 8rem;
       grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 2;
+
+      @include query($narrow) {
+        // grid-column-end: 6;
+      }
+
+      @include query($medium) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+
+      @include query($wide) {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
 
       .step {
         opacity: 0.3;
@@ -173,8 +202,22 @@
     }
 
     .graphic {
-      grid-column-start: 3;
+      grid-column-start: 1;
       grid-column-end: 6;
+
+      @include query($narrow) {
+        // grid-column-end: 6;
+      }
+
+      @include query($medium) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+
+      @include query($wide) {
+        grid-column-start: 3;
+        grid-column-end: 6;
+      }
     }
 
     .module-meta {
