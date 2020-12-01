@@ -10,6 +10,9 @@ This Learn Module is targeted at stakeholders interested in co-developing adapta
 
 This repository contains the code for [*Co-producing adaptation options to address future cross-border climate impacts*](https://climatescenarios.org/co-production/). It is part of the [SENSES Toolkit](https://climatescenarios.org/).
 
+![screenshot of the module](./screenshot_co-production_1.png)
+![screenshot of the module](./screenshot_co-production_2.png)
+
 ## License
 
 The source code is licensed under the [ISC license](LICENSE.md). Text and graphics are licensed under [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/). For licensing information on datasets please refer to the data sources section. Exceptions are listed below on a per-file basis.
