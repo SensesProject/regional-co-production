@@ -1,8 +1,6 @@
 {
-  "name": "co-production-database-introduction",
+  "name": "co-production",
   "version": "1.0.0",
-  "description": "Introduction to the co-production database",
-  "author": "Jonas <parnow@fh-potsdam.de>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,7 +11,7 @@
   "dependencies": {
     "library": "github:SensesProject/library",
     "lodash": "^4.17.19",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.14.9",
     "v-tooltip": "^2.0.3"
   },
   "devDependencies": {
